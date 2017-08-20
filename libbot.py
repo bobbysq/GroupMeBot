@@ -38,9 +38,9 @@ def vex_item(partnumber):
         money = price[0].get_text()
         return([url, name, money])
 
-def tbaGetName(team):
+def tbaGetName(team, appid, auth):
     try:
-        url = "/api/v2/team/frc"+str(team)+"?X-TBA-App-Id="+TBA_APP_ID
+        url = "/api/v3/team/frc"+str(team)+"?X-TBA-App-Id="+appid+"&X-TBA-Auth-Key="+auth #I put the API key in the URL because I don't care
         print(url)
         c = http.client.HTTPSConnection("www.thebluealliance.com")
         c.request("GET", url)

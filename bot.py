@@ -10,6 +10,7 @@ config.read('config.ini')
 
 ADMIN_NAME_HASH = config['DEFAULT']['AdminNameHash'] #MD5 hash of the bot admin's name, they have the power to !kill
 TBA_APP_ID = config['DEFAULT']['TBAAppID']
+TBA_AUTH_KEY = config['DEFAULT']['TBAAuthKey']
 GROUP_NAME = config['DEFAULT']['GroupName']
 
 bot = Bot.list().first
@@ -61,7 +62,7 @@ while True:
                 bot.post("For more information, visit https://github.com/frc4646/GroupMeBot")
             elif cmdname == "!tba":
                 teamNo = latestMsg.text.split(" ")[1]
-                teamName = tbaGetName(teamNo)
+                teamName = tbaGetName(teamNo, TBA_APP_ID, TBA_AUTH_KEY)
                 if teamNo == "8":
                     bot.post("TBA Link to team #8, The 8th team, Team \"The Ocho\" 8: https://thebluealliance.com/team/8")
                     bot.post("Wait, when did they change their name?")
