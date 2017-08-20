@@ -26,7 +26,10 @@ while True:
         if latestMsg.text == "Hi bot!":
             bot.post("Hi, "+latestMsg.name)
         else:
-            cmdname = latestMsg.text.split(" ")[0]
+            if latestMsg.text:
+                cmdname = latestMsg.text.split(" ")[0]
+            else:
+                cmdname = " "
             if cmdname == "!amlookup":
                 productNo = latestMsg.text.split(" ")[1]
                 part = andymark_item(productNo)
