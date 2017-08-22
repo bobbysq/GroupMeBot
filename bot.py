@@ -4,6 +4,7 @@ import time
 import hashlib
 import configparser
 from libbot import *
+import random
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -12,6 +13,8 @@ ADMIN_NAME_HASH = config['DEFAULT']['AdminNameHash'] #MD5 hash of the bot admin'
 TBA_APP_ID = config['DEFAULT']['TBAAppID']
 TBA_AUTH_KEY = config['DEFAULT']['TBAAuthKey']
 GROUP_NAME = config['DEFAULT']['GroupName']
+S_WORDS = ["stuff","skunk","spit","skit","ship","shirt","sport","short"]
+MF_WORDS =["Monday-Friday","monkey-fightin","megaphonin","mighty flippin","Marty flyin","Meadow frolickin"]
 
 bot = Bot.list().first
 groups = groupy.Group.list()
@@ -90,5 +93,9 @@ while True:
                     bot.post("Item not found.")
             elif cmdname == "!rollout":
                 bot.post("Optimus Remind is now officially rolling out! Check https://github.com/frc4646/GroupMeBot/blob/master/README.md for a command list!")
+            elif cmdname == "!tsimfd":
+                sWord = random.choice(S_WORDS)
+                mfWord = random.choice(MF_WORDS)
+                bot.post("This "+sWord+" is "+mfWord+" dope. That's it.")
         oldMsg = latestMsg
     time.sleep(2)
