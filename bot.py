@@ -92,7 +92,7 @@ while True:
                 else:
                     bot.post("Item not found.")
             elif cmdname == "!rollout":
-                bot.post("Optimus Remind is now officially rolling out! Check https://github.com/frc4646/GroupMeBot/blob/master/README.md for a command list!")
+                bot.post("Optimus Remind is now officially rolling out! Check https://github.com/bobbysq/GroupMeBot/blob/master/README.md for a command list!")
             elif cmdname == "!tsimfd":
                 sWord = random.choice(S_WORDS)
                 mfWord = random.choice(MF_WORDS)
