@@ -13,8 +13,8 @@ ADMIN_NAME_HASH = config['DEFAULT']['AdminNameHash'] #MD5 hash of the bot admin'
 TBA_APP_ID = config['DEFAULT']['TBAAppID']
 TBA_AUTH_KEY = config['DEFAULT']['TBAAuthKey']
 GROUP_NAME = config['DEFAULT']['GroupName']
-S_WORDS = ["stuff","skunk","spit","skit","ship","shirt","sport","short"]
-MF_WORDS =["Monday-Friday","monkey-fightin","megaphonin","mighty flippin","Marty flyin","Meadow frolickin"]
+S_WORDS = ["stuff","spit","skit","ship","shirt","sport","short"]
+MF_WORDS =["Monday-Friday","monkey-fightin","megaphonin","mighty flippin","Marty flyin","meadow frolickin"."metal forgin"]
 
 bot = Bot.list().first
 groups = groupy.Group.list()
