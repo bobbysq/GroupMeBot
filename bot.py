@@ -13,8 +13,8 @@ ADMIN_NAME_HASH = config['DEFAULT']['AdminNameHash'] #MD5 hash of the bot admin'
 TBA_APP_ID = config['DEFAULT']['TBAAppID']
 TBA_AUTH_KEY = config['DEFAULT']['TBAAuthKey']
 GROUP_NAME = config['DEFAULT']['GroupName']
-S_WORDS = ["stuff","spit","skit","ship","shirt","sport","short"]
-MF_WORDS =["Monday-Friday","monkey-fightin","megaphonin","mighty flippin","Marty flyin","meadow frolickin"."metal forgin"]
+S_WORDS = ["stuff","spit","skit","ship","shirt","sport","short","script"]
+MF_WORDS =["Monday-Friday","monkey-fightin","megaphonin","mighty flippin","Marty flyin","meadow frolickin","metal forgin"]
 
 bot = Bot.list().first
 groups = groupy.Group.list()
@@ -97,5 +97,11 @@ while True:
                 sWord = random.choice(S_WORDS)
                 mfWord = random.choice(MF_WORDS)
                 bot.post("This "+sWord+" is "+mfWord+" dope. That's it.")
+            elif "upvotes" in latestMsg.text.lower:
+                bot.post("Don't worry, they'll upvote anything.")
+            elif "cowtown" in latestMsg.text.lower:
+                bot.post("CowTwon*")
+            elif "prius patrol" in latestMsg.text.lower:
+                bot.post(random.choice["https://www.youtube.com/watch?v=r_WCfcJfh2A","https://www.youtube.com/watch?v=BQmBh-8QC6w","https://www.youtube.com/watch?v=uNNGLdTVlDY","https://www.youtube.com/watch?v=RksFDe6nkaY"])
         oldMsg = latestMsg
     time.sleep(2)
