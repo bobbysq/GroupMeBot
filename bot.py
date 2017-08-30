@@ -97,11 +97,11 @@ while True:
                 sWord = random.choice(S_WORDS)
                 mfWord = random.choice(MF_WORDS)
                 bot.post("This "+sWord+" is "+mfWord+" dope. That's it.")
-            elif "upvotes" in latestMsg.text.lower:
+            elif "upvotes" in latestMsg.text.lower():
                 bot.post("Don't worry, they'll upvote anything.")
-            elif "cowtown" in latestMsg.text.lower:
+            elif "cowtown" in latestMsg.text.lower():
                 bot.post("CowTwon*")
-            elif "prius patrol" in latestMsg.text.lower:
+            elif "prius patrol" in latestMsg.text.lower():
                 bot.post(random.choice["https://www.youtube.com/watch?v=r_WCfcJfh2A","https://www.youtube.com/watch?v=BQmBh-8QC6w","https://www.youtube.com/watch?v=uNNGLdTVlDY","https://www.youtube.com/watch?v=RksFDe6nkaY"])
         oldMsg = latestMsg
     time.sleep(2)
