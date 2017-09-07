@@ -1,10 +1,10 @@
 from bs4 import BeautifulSoup
 import re
-import urllib
+import urllib.request
 import http
 import json
 
-def andymark_item(partnumber):
+def andymark_item(partnumber): #TODO: This should be a class.
     url = 'http://www.andymark.com/product-p/am-'+str(partnumber)+'.htm'
     r = urllib.request.urlopen(url).read() #TODO: Change this to use http.client so we don't have 2 libraries doing the same thing
     try:
@@ -49,6 +49,22 @@ def tbaGetName(team, appid, auth):
         #print(teamData)
         data = json.loads(teamData)
         return data['nickname']
+    except:
+        return(None)
+
+def cdQuote(): #Remember CDValentinesScraper? Well it's back, in chatbot form!
+    try:
+        url = 'https://www.chiefdelphi.com/forums/portal.php'
+        r = urllib.request.urlopen(url).read()
+        try:
+            soup = BeautifulSoup(r, "lxml")
+        except:
+            soup = BeautifulSoup(r, "html.parser")
+        quote = soup.find("td", class_="spotlight").contents
+
+        cleanedQuote=quote[1]
+        author = quote[2].get_text()
+        return(cleanedQuote+author)
     except:
         return(None)
 
