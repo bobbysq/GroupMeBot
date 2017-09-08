@@ -62,7 +62,7 @@ while True:
             elif cmdname == "!zesty": #DO NOT DOCUMENT THIS COMMAND EVER
                 bot.post("ayy lmao")
             elif cmdname == "!about" or cmdname == "!?" or cmdname == "!help":
-                bot.post("For more information, visit https://github.com/frc4646/GroupMeBot")
+                bot.post("For more information, visit https://github.com/bobbysq/GroupMeBot")
             elif cmdname == "!tba":
                 teamNo = latestMsg.text.split(" ")[1]
                 teamName = tbaGetName(teamNo, TBA_APP_ID, TBA_AUTH_KEY)
