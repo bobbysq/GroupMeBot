@@ -24,7 +24,10 @@ for i in groups:
 oldMsg = ""
 
 while True:
-    latestMsg = group.messages().newest
+    try:
+        latestMsg = group.messages().newest
+    except:
+        latestMsg = None
     if latestMsg != oldMsg:
         #print(latestMsg)
         if latestMsg.text == "Hi bot!":
