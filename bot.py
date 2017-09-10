@@ -27,7 +27,7 @@ while True:
     try:
         latestMsg = group.messages().newest
     except:
-        latestMsg = None
+        latestMsg = " "
     if latestMsg != oldMsg:
         #print(latestMsg)
         if latestMsg.text == "Hi bot!":
