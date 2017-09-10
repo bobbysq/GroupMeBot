@@ -3,6 +3,8 @@ import re
 import urllib.request
 import http
 import json
+import csv
+import random
 
 def andymark_item(partnumber): #TODO: This should be a class.
     url = 'http://www.andymark.com/product-p/am-'+str(partnumber)+'.htm'
@@ -67,6 +69,16 @@ def cdQuote(): #Remember CDValentinesScraper? Well it's back, in chatbot form!
         return(cleanedQuote+author)
     except:
         return(None)
+
+def movieQuote(): #TODO: put the csv location in the config file
+    csvfile = open('RobotQuotes.csv', newline='')
+    quotereader = csv.reader(csvfile, dialect='excel')
+    quotedata = list(quotereader)
+    entry  = quotedata[random.randint(1,31)]
+    author = entry[0]
+    source = entry[1]
+    quote  = entry[random.randint(2,6)]
+    return(quote + " - " + author + ", " + source)
 
 def reminder():
     #TODO: AUTOMATE THIS

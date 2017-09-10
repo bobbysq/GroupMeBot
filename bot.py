@@ -13,7 +13,7 @@ ADMIN_NAME_HASH = config['DEFAULT']['AdminNameHash'] #MD5 hash of the bot admin'
 TBA_APP_ID = config['DEFAULT']['TBAAppID']
 TBA_AUTH_KEY = config['DEFAULT']['TBAAuthKey']
 GROUP_NAME = config['DEFAULT']['GroupName']
-S_WORDS = ["stuff","spit","skit","ship","shirt","sport","short","script"]
+S_WORDS = ["stuff","spit","skit","ship","shirt","sport","short","script"] #TODO: put these into a CSV
 MF_WORDS =["Monday-Friday","monkey-fightin","megaphonin","mighty flippin","Marty flyin","meadow frolickin","metal forgin"]
 
 bot = Bot.list().first
@@ -102,6 +102,9 @@ while True:
                 bot.post("This "+sWord+" is "+mfWord+" dope. That's it.")
             elif cmdname == "!quote":
                 quote = cdQuote()
+                bot.post(quote)
+            elif cmdname == "!robit":
+                quote = movieQuote()
                 bot.post(quote)
             elif "upvotes" in latestMsg.text.lower():
                 bot.post("Don't worry, they'll upvote anything.")
