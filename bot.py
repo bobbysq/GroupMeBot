@@ -23,11 +23,14 @@ for i in groups:
         group=i
 oldMsg = ""
 
+class failsafe: #Failsafe, basically a fake latestMsg
+    text = " "
+
 while True:
     try:
         latestMsg = group.messages().newest
     except:
-        latestMsg = " "
+        latestMsg = failsafe()
     if latestMsg != oldMsg:
         #print(latestMsg)
         if latestMsg.text == "Hi bot!":
