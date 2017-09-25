@@ -26,7 +26,7 @@ oldMsg = ""
 class failsafe: #Failsafe, basically a fake latestMsg
     text = " "
 
-    def __init__:
+    def __init__(self):
         print("GroupMe timed out!")
 
 while True:
