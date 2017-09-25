@@ -26,6 +26,9 @@ oldMsg = ""
 class failsafe: #Failsafe, basically a fake latestMsg
     text = " "
 
+    def __init__:
+        print("GroupMe timed out!")
+
 while True:
     try:
         latestMsg = group.messages().newest
@@ -40,6 +43,7 @@ while True:
                 cmdname = latestMsg.text.split(" ")[0]
             else:
                 cmdname = " "
+                latestMsg = failsafe()
             if cmdname == "!amlookup":
                 productNo = latestMsg.text.split(" ")[1]
                 part = andymark_item(productNo)
