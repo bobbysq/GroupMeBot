@@ -27,7 +27,8 @@ class failsafe: #Failsafe, basically a fake latestMsg
     text = " "
 
     def __init__(self):
-        print("GroupMe timed out!")
+        print("GroupMe timed out!" + time.strftime("%a, %d %b %Y %I:%M:%S %p"))
+        #Format: Wed, 27 Sep 2017 02:41:10 PM
 
 while True:
     try:
