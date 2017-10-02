@@ -74,7 +74,7 @@ def movieQuote(): #TODO: put the csv location in the config file
     csvfile = open('RobotQuotes.csv', newline='')
     quotereader = csv.reader(csvfile, dialect='excel')
     quotedata = list(quotereader)
-    entry  = quotedata[random.randint(1,31)]
+    entry  = quotedata[random.randint(1,len(quotedata)-1)] #len() counts from 1
     author = entry[0]
     source = entry[1]
     quote  = entry[random.randint(2,6)]
