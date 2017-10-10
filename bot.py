@@ -114,11 +114,14 @@ while True:
             elif cmdname == "!robit":
                 quote = movieQuote()
                 bot.post(quote)
+            ###################
+            # AREA OF SECRETS #
+            ###################
             elif "upvotes" in latestMsg.text.lower():
                 bot.post("Don't worry, they'll upvote anything.")
             elif "cowtown" in latestMsg.text.lower():
                 bot.post("CowTwon*")
             elif "prius patrol" in latestMsg.text.lower():
-                bot.post(random.choice(["https://www.youtube.com/watch?v=r_WCfcJfh2A","https://www.youtube.com/watch?v=BQmBh-8QC6w","https://www.youtube.com/watch?v=uNNGLdTVlDY","https://www.youtube.com/watch?v=RksFDe6nkaY","https://www.youtube.com/watch?v=PElH5Kidupk"]))
+                bot.post(random.choice(["https://www.youtube.com/watch?v=BQmBh-8QC6w","https://www.youtube.com/watch?v=uNNGLdTVlDY","https://www.youtube.com/watch?v=RksFDe6nkaY","https://www.youtube.com/watch?v=PElH5Kidupk","https://www.youtube.com/watch?v=OoeDiQSxhco"]))
         oldMsg = latestMsg
     time.sleep(2)
