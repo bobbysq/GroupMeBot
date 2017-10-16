@@ -20,4 +20,8 @@ Current Commands:
 * !kill: Kill the bot (admin only)
 * !manual: Links the game manual
 * !vexlookup [part #]: vex part lookup
+* !tsimfd: Dispenses knowledge from the 2016 FIRST Championship
+* !quote: Summons a quote from Chief Delphi
+* !robit: Summons a quote from a famous movie robot
+* !discord: Sends out a link to the discord for voice chat
 * Hi Bot!: Say hello to the Bot
