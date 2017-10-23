@@ -14,6 +14,7 @@ TBA_APP_ID = config['DEFAULT']['TBAAppID']
 TBA_AUTH_KEY = config['DEFAULT']['TBAAuthKey']
 GROUP_NAME = config['DEFAULT']['GroupName']
 DISCORD_LINK = config['DEFAULT']['DiscordLink']
+QUOTE_FILE = config['DEFAULT']['QuotesFile']
 S_WORDS = ["stuff","spit","skit","ship","shirt","sport","short","script"] #TODO: put these into a CSV
 MF_WORDS =["Monday-Friday","monkey-fightin","megaphonin","mighty flippin","Marty flyin","meadow frolickin","metal forgin"]
 
@@ -113,7 +114,7 @@ while True:
                 quote = cdQuote()
                 bot.post(quote)
             elif cmdname == "!robit":
-                quote = movieQuote()
+                quote = movieQuote(QUOTE_FILE)
                 bot.post(quote)
             elif cmdname == "!discord":
                 bot.post("Link to the discord for voice chat: " + DISCORD_LINK)

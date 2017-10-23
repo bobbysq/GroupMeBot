@@ -70,8 +70,8 @@ def cdQuote(): #Remember CDValentinesScraper? Well it's back, in chatbot form!
     except:
         return(None)
 
-def movieQuote(): #TODO: put the csv location in the config file
-    csvfile = open('RobotQuotes.csv', newline='')
+def movieQuote(quotesFile):
+    csvfile = open(quotesFile, newline='')
     quotereader = csv.reader(csvfile, dialect='excel')
     quotedata = list(quotereader)
     entry  = quotedata[random.randint(1,len(quotedata)-1)] #len() counts from 1
