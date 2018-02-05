@@ -41,7 +41,7 @@ def vex_item(partnumber):
         return([url, name, money])
 
 def tbaGetName(team, appid, auth):
-    #try:
+    try:
         url = "/api/v3/team/frc"+str(team)
         keys = {"X-TBA-Auth-Key" : auth, "X-TBA-App-Id" : appid}
         print(url)
@@ -52,8 +52,8 @@ def tbaGetName(team, appid, auth):
         #print(teamData)
         data = json.loads(teamData)
         return data['nickname']
-    #except:
-    #    return(None)
+    except:
+        return(None)
 
 def cdQuote(): #Remember CDValentinesScraper? Well it's back, in chatbot form!
     try:
